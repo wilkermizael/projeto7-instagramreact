@@ -1,22 +1,23 @@
+import Story from "./Story"
 export default function Stories(){
-    const arrayImg =[
+    const array = [
         <>
-        <img src="../assets/img/9gag.svg" alt=""></img>
-        <img src="../assets/img/barked.svg" alt=""></img>
-        <img src="../assets/img/nathanwpylestrangeplanet.svg" alt=""></img>
-        <img src="../assets/img/wawawicomics.svg" alt=""></img>
-        <img src="../assets/img/respondeai.svg" alt=""></img>
-        <img src="../assets/img/filomoderna.svg" alt=""></img>
-        <img src="../assets/img/meowed.svg" alt=""></img>
-        <img src="../assets/img/memeriagourmet.svg" alt=""></img>
+        <Story imagem ="../assets/img/9gag.svg" />
+        <Story imagem ="../assets/img/barked.svg"/>
+        <Story imagem ="../assets/img/nathanwpylestrangeplanet.svg"/>
+        <Story imagem ="../assets/img/wawawicomics.svg"/>
+        <Story imagem ="../assets/img/respondeai.svg"/>
+        <Story imagem ="../assets/img/filomoderna.svg"/>
+        <Story imagem ="../assets/img/meowed.svg"/>
         </>
     ]
-    const stories= arrayImg.map(item =><div className="imagem"> {item}</div> )
-    
+    const myStory = array.map(item => <>{item}</>)
     return (
-       
         <div className="stories story">
-            {stories}        
+
+            {myStory}    
+    
         </div>    
     )
 }
+

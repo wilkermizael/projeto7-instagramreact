@@ -1,59 +1,23 @@
+import MySugestions from "./Mysugestions"
 export default function Sugestions(){
+    const array =[
+        <>
+        <MySugestions imagem="../assets/img/bad.vibes.memes.svg" texto1="bab.vibes.memes" texto2="Segue você"/>
+        <MySugestions imagem="../assets/img/chibirdart.svg" texto1="chibidart" texto2="Segue você"/>
+        <MySugestions imagem="../assets/img/razoesparaacreditar.svg" texto1="razoesparaacreditar" texto2="Novo no Instagram"/>
+        </>
+    ]
+    const sugestoes = array.map(item =><>{item}</>)
     return (
         <>
         <div className="titulo">
         <span>Sugestões para você</span>
         <spam>Ver tudo</spam>
-    </div>
-    
-    <div className="sugestao">
-    
-        <div className="usuario">
-            <img src="../assets/img/bad.vibes.memes.svg"alt=""/>
-            
-            <div className="texto">
-                <p> bab.vibes.memes</p>
-                <p>Segue você</p>
-            </div>
-
-        </div>
         
-        <spam className="seguir">Seguir</spam>
-
     </div>
-
-
-    <div className="sugestao">
     
-    <div className="usuario">
-        <img src="../assets/img/chibirdart.svg"alt=""/>
+        {sugestoes}
         
-        <div className="texto">
-            <p> chibidart</p>
-            <p>Segue você</p>
-        </div>
-
-    </div>
-    
-    <spam className="seguir">Seguir</spam>
-    
-</div>
-
-<div className="sugestao">
-    
-    <div className="usuario">
-        <img src="../assets/img/razoesparaacreditar.svg"alt=""/>
-        
-        <div className="texto">
-            <p> razoesparaacreditar</p>
-            <p>Novo no Instagram</p>
-        </div>
-
-    </div>
-    
-    <spam className="seguir">Seguir</spam>
-    
-</div>
     <div className="links">
         
         Sobre . Ajuda . Imprensa . API . Carreiras . Privacidade .
@@ -68,3 +32,4 @@ export default function Sugestions(){
 </>
     )
 }
+
