@@ -59,33 +59,33 @@ export default function Postagem(props){
     }
     
     return (
-        <>
-        <div className="topo">
-                <img src={props.imagem} alt="" />
-                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+        <div data-test="post">
+            <div className="topo">
+                    <img src={props.imagem} alt="" />
+                    <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
             </div>
-            <div className="conteudo">
-                <img onClick={()=>curtidaFoto()} src={props.imagem2} alt=""/>
-            </div>
-            <div className="fundo">
-                <div className="acoes">
-                    <div>
-                        <ion-icon onClick={()=>curtida()} name={curtidas}></ion-icon>
-                        <ion-icon name="chatbubble-outline"></ion-icon>
-                        <ion-icon name="paper-plane-outline"></ion-icon>
+                <div className="conteudo">
+                    <img data-test="post-imgage" onClick={()=>curtidaFoto()} src={props.imagem2} alt=""/>
+                </div>
+                <div className="fundo">
+                    <div className="acoes">
+                        <div>
+                            <ion-icon data-test="like-post" onClick={()=>curtida()} name={curtidas}></ion-icon>
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                            <ion-icon name="paper-plane-outline"></ion-icon>
 
+                        </div>
+
+                        <div>
+                            <ion-icon data-test="save-post" onClick={() => salvaPost()} name={salvando}></ion-icon>
+                        </div>
                     </div>
 
-                    <div>
-                        <ion-icon onClick={() => salvaPost()} name={salvando}></ion-icon>
+                    <div className="curtidas">
+                        <img src={props.imagem3} alt="" />
+                        <p > Curtido por <strong>{props.texto}</strong> e <strong>outras</strong> <spam data-test="likes-number">{numero}</spam> pessoas</p>
                     </div>
                 </div>
-
-                <div className="curtidas">
-                    <img src={props.imagem3} alt="" />
-                    <p> Curtido por <strong>{props.texto}</strong> e <strong>outras</strong> {numero} pessoas</p>
-                </div>
-            </div>
-    </>
+    </div>
     )
 }

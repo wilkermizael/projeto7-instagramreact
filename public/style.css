@@ -163,6 +163,7 @@ body {
   padding: 13px 16px;
   font-size: 14px;
   font-weight: 500;
+  
 }
 
 .post .topo .usuario, .post .topo .acoes {
@@ -182,6 +183,7 @@ body {
 
 .post .conteudo img {
   width: 100%;
+  
 }
 
 .post .fundo .acoes {
