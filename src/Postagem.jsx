@@ -10,19 +10,24 @@ export default function Postagem(props){
     let [cor,setcor] = useState('');
 
     function curtidaFoto(){
+        numeroInt ++;
         if(cont=== '0'){
             minhaCurtida = 'heart'
             setcurtidas(minhaCurtida)
-            numeroInt ++;
+            
             let contador ='1'
             setcont(contador);
             setnumero(numeroInt)
             setcor("like");
            
+        }else if (cont !== '0'){
+            minhaCurtida = 'heart'
+            setcurtidas(minhaCurtida)
+            setcor("like");
         }
     }
 
-    function curtida(foto){
+    function curtida(){
         
         if(curtidas === 'heart-outline'){
             
@@ -68,7 +73,7 @@ export default function Postagem(props){
                     <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
             </div>
                 <div className="conteudo">
-                    <img data-test="post-image" onClick={()=>curtidaFoto()} src={props.imagem2} alt=""/>
+                    <img data-test="post-image" onDoubleClick={()=>curtidaFoto()} src={props.imagem2} alt=""/>
                 </div>
                 <div className="fundo">
                     <div className="acoes">
