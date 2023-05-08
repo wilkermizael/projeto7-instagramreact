@@ -7,6 +7,7 @@ export default function Postagem(props){
     let [numero, setnumero] = useState(props.nCurtida);
     let numeroInt = parseInt(numero);
     let [cont, setcont] = useState('0');
+    let [cor,setcor] = useState('');
 
     function curtidaFoto(){
         if(cont=== '0'){
@@ -16,7 +17,7 @@ export default function Postagem(props){
             let contador ='1'
             setcont(contador);
             setnumero(numeroInt)
-
+            setcor("like");
            
         }
     }
@@ -29,6 +30,7 @@ export default function Postagem(props){
             setcurtidas(minhaCurtida)
             numeroInt ++;
             setnumero(numeroInt)
+            setcor("like");
             cont++
             
             
@@ -39,6 +41,7 @@ export default function Postagem(props){
             setcurtidas(minhaCurtida);
             numeroInt--;
             setnumero(numeroInt);
+            setcor("");
             
         }
 
@@ -69,7 +72,7 @@ export default function Postagem(props){
                 </div>
                 <div className="fundo">
                     <div className="acoes">
-                        <div className="like">
+                        <div className={cor}>
                             <ion-icon  data-test="like-post" onClick={()=>curtida()} name={curtidas}></ion-icon>
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
