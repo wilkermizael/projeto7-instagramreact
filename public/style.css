@@ -319,3 +319,8 @@ ion-icon {
   color: black;
 }
 
+.fundo .acoes .like :nth-child(1){
+ color: red;
+
+
+}

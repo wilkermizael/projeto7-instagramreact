@@ -65,12 +65,12 @@ export default function Postagem(props){
                     <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
             </div>
                 <div className="conteudo">
-                    <img data-test="post-imgage" onClick={()=>curtidaFoto()} src={props.imagem2} alt=""/>
+                    <img data-test="post-image" onClick={()=>curtidaFoto()} src={props.imagem2} alt=""/>
                 </div>
                 <div className="fundo">
                     <div className="acoes">
-                        <div>
-                            <ion-icon data-test="like-post" onClick={()=>curtida()} name={curtidas}></ion-icon>
+                        <div className="like">
+                            <ion-icon  data-test="like-post" onClick={()=>curtida()} name={curtidas}></ion-icon>
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
 
